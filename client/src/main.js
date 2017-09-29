@@ -5,8 +5,16 @@ import App from './App'
 import router from './router'
 import '@/assets/css/app'
 import VueLazyLoad from 'vue-lazyload'
+
+import apiConfig from '../config/api.config'
+import Axios from 'axios'
+import VueAxios from 'vue-axios'
+
 import infiniteScroll from 'vue-infinite-scroll'
 Vue.use(infiniteScroll)
+Vue.use(VueAxios, Axios);
+Axios.defaults.baseURL = apiConfig.baseUrl;
+
 Vue.use(VueLazyLoad, {
     loading: '/static/img/ok-2.png'
 })

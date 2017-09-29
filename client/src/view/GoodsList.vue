@@ -63,7 +63,7 @@
 import HeadNav from '@/components/Head'
 import NavBread from '@/components/NavBread'
 import Footers from '@/components/Footer'
-import axios from 'axios'
+//import axios from 'axios'
 export default {
     data(){
         return{
@@ -108,7 +108,7 @@ export default {
     },
     methods:{
         getGoodsList(){
-            axios.get('测试接口')
+            this.$http.get('测试接口')
             .then(res=>{
 
                 res = res.data.data;
@@ -116,7 +116,7 @@ export default {
             })
         },
         getGoods(flag){let sort = this.sortFlag ? 1 : -1;
-                    axios.get('/goods/list',{params:{sort:sort,priceLevel:this.priceChecked,page:this.page,pagesize:this.pagesize}}).then(res=>{
+          this.$http.get('/goods/list',{params:{sort:sort,priceLevel:this.priceChecked,page:this.page,pagesize:this.pagesize}}).then(res=>{
                       if (flag){
                         if (res.data.result.length==0){
                           this.busy=true;
@@ -148,17 +148,18 @@ export default {
         }, 1000);
       },
       addcar:function (productId) {
-        axios.post('/goods/addCart',{
+        this.$http.post('/goods/addCart',{
           productId:productId
         }).then(result=>{
           let res=result.data;
           if(res.status==0){
-              alert('成功')
+              alert('加入购车成功')
           }else {
-              alert('失败')
+              alert('加入购物车失败')
           }
         })
       }
+
     }
 }
 </script>

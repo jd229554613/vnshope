@@ -43,8 +43,7 @@ router.get("/list", function(req, res, next) {
     let skip=(currentPage-1)*pagesize;
     let goodModel = Goods.find(param).sort({ 'salePrice': sort }).skip(skip).limit(pagesize)
     goodModel.exec({}, function(err, doc) {
-        res.json({ status: 0, result: doc })
-
+        res.json({ status:0, result: doc })
     });
 });
 router.post('/addCart',function (req,res,next) {

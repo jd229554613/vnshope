@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
-var userSchema = new Schema({
+let mongoose = require('mongoose');
+let Schema = mongoose.Schema;
+let userSchema = new Schema({
     "userId": String,
     "userName": String,
     "orderList": Array,
-    "cartList": Array,
+    // "cartList": Array,
     "cartList": [{
         "productId": String,
         "productName": String,
