@@ -12,13 +12,15 @@ import VueAxios from 'vue-axios'
 
 import infiniteScroll from 'vue-infinite-scroll'
 Vue.use(infiniteScroll)
+
 Vue.use(VueAxios, Axios);
 Axios.defaults.baseURL = apiConfig.baseUrl;
+
 
 Vue.use(VueLazyLoad, {
     loading: '/static/img/ok-2.png'
 })
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
 
 /* eslint-disable no-new */
 new Vue({

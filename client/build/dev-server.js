@@ -24,13 +24,16 @@ var proxyTable = config.dev.proxyTable
 
 var app = express()
 var compiler = webpack(webpackConfig)
-// var router = express.Router();
-// var goodsList = require('../mock/goods.json');
-// //对外暴露一个漏油，然后但你访问的时候运行
+    // var router = express.Router();
+    // var goodsList = require('../mock/goods.json');
+
+// // 对外暴漏一个路由，然后当你访问的时候给你做点事情
 // router.get("/goods", function(req, res, next) {
+//     // req 请求
+//     // res 响应
 //     res.json(goodsList);
 // })
-//
+
 // app.use(router);
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
