@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import GoodsList from '@/view/GoodsList'
 
-import Cart from '@/view/cart'
+import Cart from '@/view/Cart'
 import Address from '@/view/Address'
 import OrderConfirm from '@/view/OrderConfirm'
 import OrderSuccess from '@/view/OrderSuccess'
