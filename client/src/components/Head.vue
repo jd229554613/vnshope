@@ -7,7 +7,7 @@
             </div>
             <div class="header-nav">
                 <ul class="nav-list">
-                    
+
                 </ul>
             </div>
             <!-- <div class="container-user"> -->
@@ -36,7 +36,7 @@
         <div class="md-modal-inner">
           <div class="md-top">
             <div class="md-title">login in</div>
-            <button class="md-close">Close</button>
+            <button class="md-close" @click="loginModalFlag=!loginModalFlag">Close</button>
           </div>
           <div class="md-content">
             <div class="confirm-tips">
