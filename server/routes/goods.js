@@ -3,7 +3,7 @@ var router = express.Router();
 var mongoose = require('mongoose');
 var Goods = require('../models/goods')
 var User = require('../models/user')
-mongoose.connect('mongodb://localhost:27017/sever');
+mongoose.connect('mongodb://69.171.72.82:27017/sever');
 
 mongoose.connection.on('connected', function() {
     console.log("mongondb connected success");
